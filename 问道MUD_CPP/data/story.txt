@@ -1,0 +1,114 @@
+# 剧情数据文件
+# 每个章节用 [chX] 标记
+# 步骤用 stepN_xxx 格式，N从1开始
+# stepN_type: talk(对话) defeat(击败) get_item(获得物品) enter_room(进入房间)
+# stepN_target: 目标NPC/物品/房间ID
+# stepN_dialogue: 触发时显示的对话（可选）
+# stepN_reward_exp: 完成奖励经验（可选）
+# stepN_reward_item: 完成奖励物品（可选）
+
+[ch1]
+title=第一章 · 初入书院
+step1_text=你来到白鹿书院，颜夫子在庭院中等你。
+step1_objective=与颜夫子对话
+step1_type=talk
+step1_target=mentor_yan
+step1_dialogue=颜夫子看着你："你就是新来的学生？从今日起，你便是白鹿书院的弟子了。记住，求学之道，在明明德。先去藏书阁找一本《易经》来读，读完再来见我。"
+step2_text=颜夫子让你去藏书阁找《易经》。
+step2_objective=获得《易经》
+step2_type=get_item
+step2_target=book_of_changes
+step3_text=你已得到《易经》，回去找颜夫子。
+step3_objective=与颜夫子对话
+step3_type=talk
+step3_target=mentor_yan
+step3_dialogue=颜夫子接过《易经》，翻了翻："很好。从今日起，你每日都要读书。不过，光读书不够，还要去论道场与同窗切磋。去论道场找苏辩师，跟他学一学论道的基本功。"
+step3_reward_exp=30
+
+[ch2]
+title=第二章 · 格物致知
+step1_text=颜夫子让你去论道场找苏辩师切磋。
+step1_objective=在论道场战胜苏辩师
+step1_type=defeat
+step1_target=debate_master
+step2_text=你战胜了苏辩师，对论道有了初步理解。去静心园走走，也许能有所悟。
+step2_objective=与青云道人对话
+step2_type=talk
+step2_target=taoist_hermit
+step2_dialogue=青云道人笑道："你跟苏辩士论过道了？感觉如何？儒家的论道，讲究的是正名定分；道家的论道，讲究的是顺其自然。你觉得，哪个更有道理？"你沉思良久，似有所悟。
+step2_reward_exp=50
+step2_reward_item=scroll_of_tao
+
+[ch3]
+title=第三章 · 下山历练
+step1_text=颜夫子认为你学业小成，该下山历练了。"纸上得来终觉浅，绝知此事要躬行。"去山下的清平镇看看吧。
+step1_objective=到达清平镇
+step1_type=enter_room
+step1_target=town_entrance
+step2_text=你来到清平镇，这里看似太平，但镇民的神色间似乎藏着忧虑。去市集听听说书人讲了什么。
+step2_objective=与说书人对话
+step2_type=talk
+step2_target=storyteller
+step2_dialogue=说书人压低声音："公子是外地人吧？这镇子表面太平，其实……唉，最近官府加税，边关又征兵，老百姓的日子不好过啊。听说都城那边，丞相和大将军又吵起来了，这天下，怕是要乱。"
+step3_text=说书人的话让你忧心。在茶馆坐坐，也许能听到更多消息。
+step3_objective=与茶博士对话
+step3_type=talk
+step3_target=tea_master
+step3_dialogue=茶博士叹了口气："最近来茶馆发牢骚的人越来越多了。有骂官府的，有骂丞相的，还有说要造反的……唉，这日子，什么时候是个头啊。公子，你是读书人，你说，这天下还有救吗？"
+step3_reward_exp=60
+
+[ch4]
+title=第四章 · 朝堂风云
+step1_text=民间的疾苦让你意识到，学问必须用于济世。你决定前往都城，看看朝堂之上究竟发生了什么。
+step1_objective=到达都城
+step1_type=enter_room
+step1_target=capital_gate
+step2_text=你来到都城，气氛紧张。金銮殿外，文太傅和韩尚书似乎正在争论。
+step2_objective=与文太傅对话
+step2_type=talk
+step2_target=minister_confucius
+step2_dialogue=文太傅忧心忡忡："你是读书人？来得正好。韩尚书主张严刑峻法，老夫主张以仁义治天下，两人争执不下。你若有兴趣，可与韩尚书论一论道，看看究竟是仁治好，还是法治好。"
+step3_text=文太傅希望你与韩尚书论道，证明仁义之道。
+step3_objective=在辩论中战胜韩尚书
+step3_type=defeat
+step3_target=minister_legalist
+step4_text=你战胜了韩尚书，但他的话也让你深思。法治与仁治，真的是非此即彼吗？
+step4_objective=再次与文太傅对话
+step4_type=talk
+step4_target=minister_confucius
+step4_dialogue=文太傅叹道："你赢了辩论，但韩尚书说的也不是全无道理。这天下事，从来不是非黑即白。老夫老了，未来是你们年轻人的。去边关看看吧，那里的烽火，会告诉你真正的答案。"
+step4_reward_exp=150
+step4_reward_item=legalist_tome
+
+[ch5]
+title=第五章 · 兼爱非攻
+step1_text=文太傅让你去边关看看。你沿着官道北上，来到了古战场。
+step1_objective=到达古战场
+step1_type=enter_room
+step1_target=battlefield
+step2_text=古战场上，一个伤兵奄奄一息。给他一些帮助吧。（使用回春丹）
+step2_objective=使用药品治疗伤兵
+step2_type=use_item_on
+step2_target=healing_pill
+step2_target_npc=wounded_soldier
+step2_dialogue=伤兵服下药，脸色好了一些："多谢公子……我还能回家吗？我娘还在等我……"他的话让你心如刀绞。
+step3_text=伤兵的话让你深思。战场的另一端，墨将军正在巡视。
+step3_objective=与墨将军对话
+step3_type=talk
+step3_target=general_mo
+step3_dialogue=墨将军看着远方的长城："你看到了吗？这些死去的士兵，他们也有父母，也有妻儿。可他们死了，就只是一堆白骨。我们墨家讲兼爱非攻，可这天下，谁听我们的？"你沉默良久，心中似乎有什么东西破开了。
+step3_reward_exp=200
+
+[ch6]
+title=终章 · 问道
+step1_text=从边关回来，你对世间的道理有了更深的理解。回到书院，颜夫子在等你。
+step1_objective=回到书院与颜夫子对话
+step1_type=talk
+step1_target=mentor_yan
+step1_dialogue=颜夫子看着你，眼中满是欣慰："你回来了。这一路，你看到了什么？学到了什么？"你将一路上的所见所闻娓娓道来。颜夫子听完，抚掌大笑："好！好！你终于明白了——儒、道、法、墨，各有其理，也各有其弊。真正的道，不在一家之言，而在融会贯通，经世致用。你已出师了。"
+step2_text=颜夫子告诉你，你已出师。但问道之路，才刚刚开始。
+step2_objective=前往论道场
+step2_type=enter_room
+step2_target=debate_hall
+step2_dialogue=你来到论道场，空无一人。但你知道，你最大的对手，从来不是别人，而是你自己。你坐在论道台上，开始与自己辩论——关于仁义，关于无为，关于法治，关于兼爱。不知过了多久，你站起身来，心中一片澄明。
+step2_reward_exp=500
